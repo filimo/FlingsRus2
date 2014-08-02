@@ -9,3 +9,5 @@ backbone
 jquery
 iron-router
 spin
+accounts-password
+email
