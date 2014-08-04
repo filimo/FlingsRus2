@@ -1,4 +1,9 @@
 <template name="chatMessageDetail">
-    <div>Detail</div>
-    {{text}}
+    <a href="{{pathFor 'wowChat'}}">Show all messages</a>
+    <form>
+        <div>Detail</div>
+        Saved:{{text}}
+        <input name="text" value="{{text}}">
+        <input type="submit" value="Save">
+    </form>
 </template>

@@ -1,5 +1,5 @@
 <template name="layout">
-    <div>{{user}}</div>
+    {{#if currentUser}}<div>User: {{user}}</div>{{/if}}
     <div>Version1: {{appVersion}}</div>
     <div>{{pathFor 'wowChat'}}</div>
     {{> yield}}
