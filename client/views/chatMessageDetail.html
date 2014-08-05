@@ -1,6 +1,6 @@
 <template name="chatMessageDetail">
     <a href="{{pathFor 'wowChat'}}">Show all messages</a>
-    <form>
+    <form class="{{classRouter 'test1' 'test2'}}">
         <div>Detail</div>
         Saved:{{text}}
         <input name="text" value="{{text}}">

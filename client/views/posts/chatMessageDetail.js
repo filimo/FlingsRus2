@@ -1,17 +1,21 @@
 Template.chatMessageDetail.helpers({
-
+    classRouter: function() {
+        var args = Array.prototype.slice.call(arguments, 0)
+        args.pop()
+        debugger
+    }
 })
 
 Template.chatMessageDetail.events({
-    'submit form': function(event) {
+    'submit form': function(event, template) {
         event.preventDefault()
 
         var message = {
             _id: this._id,
-            text: $(event.currentTarget).find('[name=text]').val()
+            text: template.$('[name=text]').val()
         }
 
-        Meteor.call('saveMessage', message, function() {
+        Meteor.call('saveMessage', message, function(error) {
             if(error) return alert(error.reason)
         })
     }
